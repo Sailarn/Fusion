@@ -1,0 +1,373 @@
+@import "_mixins/flex"
+@import "_mixins/font"
+@import "fonts"
+@import "vars"
+
+button
+	background-color: transparent
+	color: $white
+	padding: 5px
+	svg
+		margin-left: 10px
+.flex-center
+	@include flex(row, center, center)				
+.flex-column-start
+	@include flex(column, flex-start, center)		
+.flex-column-center
+	@include flex(column, center, center)
+.flex-space
+	@include flex(row, space-between, center)
+.flex-start
+	@include flex(row, space-between, flex-start)			
+.flex-reverse
+	@include flex(column-reverse, center, center)		
+header
+	background-image: url(../img/header/firstBG.png)
+	background-size: cover
+	background-repeat: no-repeat
+	height: 100vh
+.wrapper
+	width: 100%
+	height: 100%
+.welcomeWordsHeader
+	border: 1px solid rgba(143, 143, 143, 0.5)
+	max-width: 750px
+	text-align: center
+	padding: 20px
+	h1
+		@include font($white, $Merri, 3.438rem, 400)
+	span
+		color: $orange
+.welcomeWordsUnder
+	margin-top: 25px
+	p
+		@include font($white, $SansReg, 0.813em, 400)
+		text-transform: uppercase
+		&:not(:last-child)
+			border-right: 1px solid $orange
+			padding-right: 20px
+			margin-right: 20px
+.welcomeArrow
+	position: relative
+	top: 150px
+.getInTouch	
+	position: relative
+	top: 200px
+	left: 400px
+	width: 130px
+	p
+		@include font($white, $Merri, 0.875em, 500)
+		text-transform: uppercase
+.Services
+	padding-bottom: 150px
+	background-color: #202020
+	&>.wrapper
+		&>h2
+			text-transform: uppercase
+			@include font($orange, $SansReg, 0.875em, 400)
+		&>h1
+			@include font($white, $Merri, 2.5em, 400)	
+			text-align: center
+			width: 648px
+			margin-bottom: 114px
+.line
+	margin-bottom: 25px
+	width: 2px
+	height: 125px
+	background-color: $orange 				
+.servicesContainer
+	width: 50%
+	flex-wrap: wrap
+.servicesItem
+	max-width: 223px
+	&:not(:last-child)
+		margin-right: 20px
+	&>h3
+		margin-top: 36px
+		margin-bottom: 24px
+		@include font($white, $Merri, 1.875em, 400)
+	&>p
+		margin-bottom: 32px
+		@include font(#bbbbbb, $SansReg, 1em, 400)	
+.serviceDetail	
+	max-width: 100px
+	&>p
+		@include font($white, $SansReg, 1em, 400)	
+.Projects
+	background-color: #181818
+	padding: 150px 0
+	overflow-x: hidden
+.projectHeader
+	position: relative
+	left: 290px
+	bottom: 120px
+	&>h2
+		width: 140px
+		margin-top: 20px
+		text-transform: uppercase
+		@include font($orange, $SansReg, 0.875em, 400)
+.topLine
+	background-color: $orange
+	width: 100%
+	max-width: 2px
+	height: 125px
+.projectsSlider
+	width: 100%
+	&>.owl-dots
+		width: 100%
+		margin-top: 50px
+		display: flex
+		justify-content: center
+		height: 10px
+		&>.owl-dot
+			background-color: #5c5c5c
+			width: 29px
+			height: 2px
+			&:not(:last-child)
+				margin-right: 50px
+		&>.active	
+			background-color: $orange
+.projectItem
+	width: 100%
+	position: relative
+	right: 150px
+	.projectImg
+		position: relative
+		z-index: 1
+		width: 800px
+		height: 600px
+		background-color:  #919191
+	&>h1
+		left: 150px
+		z-index: 5
+		position: relative
+		width: 400px
+		@include font($white, $Merri, 3em, 100)
+		transform: scaleY(1.0003)
+		text-shadow: 0px 0px 10px rgba(24, 24, 24, 0.5)
+.projectFooter
+	position: relative
+	top: 200px
+	left: 20px
+.projectDetails
+	min-width: 125px
+.projectSlides
+	min-width: 100px
+	margin-bottom: 20px
+.bottomLine	
+	background-color: $orange
+	width: 100%
+	max-width: 2px
+	height: 125px	
+.Testimonials
+	padding-bottom: 130px
+	background-color: #202020
+.testimonialsHeader
+	&>h2
+		margin-top: 20px
+		text-transform: uppercase
+		@include font($orange, $SansReg, 0.875em, 400)	
+	&>h1
+		@include font($white, $Merri, 3em, 100)
+		max-width: 1000px
+		text-align: center	
+.testimonialsClients
+	margin: 100px 0
+	width: 70%
+	&>img
+		filter: grayscale(100%)		
+.testimonialsSlider
+	width: 750px
+	.testimonialItem
+		background-color:  #181818
+		box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.3)
+		width: 750px
+		padding: 0 65px 20px 65px
+		margin-bottom: 50px
+		img
+			width: 15%
+		&>p
+			margin-top: 50px
+			@include font(#bbbbbb, $Merri, 1.063em, 400)
+			text-align: center
+			line-height: 2.118		
+	&>.owl-dots
+		width: 50%
+		margin: 0 auto
+		height: 10px
+		&>.owl-dot
+			background-color: #5c5c5c
+			width: 29px
+			height: 3px
+			&:not(:last-child)
+				margin-right: 50px
+		&>.active	
+			background-color: $orange
+.testimonialItemLower
+	width: 100%
+	margin-top: 40px
+.upperLine
+	background-color: #474747
+	width: 200px
+	height: 2px
+.testimonialAuthor		
+	&>h3
+		@include font($orange, $SansReg, 1.2em, 400)
+		text-align: center	
+	&>h4
+		margin-top: 10px
+		@include font($white, $SansReg, 0.9em, 400)	
+		text-align: center		
+.Team
+	background-color: #181818
+	padding-bottom: 125px
+.teamHeader
+	&>h2
+		margin-top: 20px
+		text-transform: uppercase
+		@include font($orange, $SansReg, 0.875em, 400)	
+	&>h1
+		@include font($white, $Merri, 3em, 100)
+		text-align: center
+.teamContainer
+	margin-top: 100px
+	width: 60%
+	flex-wrap: wrap
+.teamItem	
+	max-height: 300px
+	border-right: 1px solid #202020
+	&:hover
+		.visibleContent
+			animation: visible 1 1s
+			opacity: 0
+		.hiddenContent
+			animation: hidden 1 1s
+			opacity: 1
+	&>.visibleContent
+		padding: 50px 80px 70px 80px
+		opacity: 1
+		transition: all ease 1s
+		&>img
+			width: 100%	
+			max-width: 100px	
+		&>h3
+			margin-top: 25px
+			@include font($orange, $SansReg, 1.2em, 400)
+			text-align: center	
+		&>h4
+			margin-top: 13px
+			@include font($white, $SansReg, 0.9em, 400)	
+			text-align: center	
+	&>.hiddenContent
+		position: relative
+		bottom: 300px
+		height: 300px
+		opacity: 0
+		transition: all ease 1s
+		&>img
+			width: 20%
+			max-width: 50px	
+		&>h3
+			position: relative
+			right: 100px
+			top: 60px
+			@include font($orange, $SansReg, 1.2em, 400)
+			text-align: center	
+			transform: rotate(90deg)
+		&>h4
+			position: relative
+			right: 125px
+			top: 50px
+			@include font($white, $SansReg, 0.9em, 400)	
+			text-align: center
+			transform: rotate(90deg)
+		&>p
+			max-width: 180px
+			position: relative
+			left: 100px
+			bottom: 80px
+			@include font(#bababa, $SansReg, 0.813em, 400)					
+			line-height: 2
+@keyframes visible
+    from 
+    	opacity: 1
+    to 
+    	opacity: 0
+@keyframes hidden
+    from 
+    	opacity: 0
+    to 
+    	opacity: 1   
+.Contact
+	background-color: #343434
+.contactHeader
+	&>h2
+		margin-top: 20px
+		text-transform: uppercase
+		@include font($orange, $SansReg, 0.875em, 400)	
+	&>h1
+		text-align: center
+		@include font($white, $Merri, 3em, 100)
+form    
+	margin-bottom: 125px
+	max-width: 752px
+	flex-wrap: wrap
+	padding: 50px 60px 60px 60px
+	margin-top: 40px
+	background-color: #181818		
+	input
+		@include font($white, $SansReg, 0.85em, 400)	
+		width: 275px
+		padding: 5px 0
+		background-color: transparent
+		border-bottom: 1px solid #5c5c5c
+		margin-bottom: 60px	
+		transition: all 1s ease
+		&:focus ~ label
+			color: $orange
+			font-size: 0.8em
+		&:focus
+			border-color: $orange	
+	textarea
+		@include font($white, $SansReg, 1em, 400)
+		background-color: transparent
+		border-bottom: 1px solid #5c5c5c
+		width: 636px
+		resize: none
+		padding-top: 10px
+		margin-bottom: 60px	
+		transition: all 1s ease
+		&:focus ~ label
+			color: $orange
+			font-size: 0.8em
+		&:focus
+			border-color: $orange	
+	label
+		line-height: 20px
+		transition: all ease .3s
+		align-self: flex-start
+		@include font($white, $SansReg, 1em, 400)	
+	button
+		margin: 0 auto
+		background-color:  #feb960
+		width: 220px
+		height: 60px
+		@include font(rgba(35, 35, 35, 0.9), $SansReg, 1em, 600)	
+		img
+			margin-left: 5px
+footer
+	padding: 60px 0
+	background-color: #343434	
+	&>.wrapper
+		width: 50%
+		margin: 0 auto
+.footerItem
+	align-self: flex-start
+	max-width: 170px
+	&>h3
+		margin-bottom: 20px
+		@include font($white, $SansReg, 1em, 400)	
+	&>p
+		@include font(#bababa, $SansReg, 0.9em, 400)	
+	&>a
+		@include font(#bababa, $SansReg, 0.9em, 400)	

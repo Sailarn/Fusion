@@ -1,0 +1,191 @@
+@import "_mixins/flex"
+@import "_mixins/font"
+@import "fonts"
+@import "vars"
+
+
+@media screen and (max-width: 2560px)
+	.teamContainer
+		width: 50% 
+	footer	
+		&>.wrapper
+			width: 30%
+@media screen and (max-width: 2352px)	
+	.teamContainer
+		width: 60% 	
+@media screen and (max-width: 1957px)
+	.teamContainer
+		width: 75%	
+	footer	
+		&>.wrapper
+			width: 40%				
+@media screen and (max-width: 1680px)
+	.servicesContainer
+		width: 70%	
+@media screen and (max-width: 1565px)		
+	.teamContainer
+		width: 90%		
+	footer	
+		&>.wrapper
+			width: 50%		
+@media screen and (max-width: 1304px)		
+	.teamContainer
+		width: 100%		
+
+@media screen and (max-width: 1280px)
+	.testimonialsClients
+		width: 90%		
+	.projectHeader
+		left: 200px
+	.projectItem
+		&>h1
+			left: 50px	
+			width: 450px	
+	footer	
+		&>.wrapper
+			width: 70%	
+@media screen and (max-width: 1174px)	
+	.teamContainer
+		width: 70%		
+	.Projects
+		padding: 0 0 150px 0 	
+	.projectHeader
+		position: static
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center	
+	.projectItem
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		position: static
+		right: 0	
+		&>h1
+			width: initial
+			position: static
+		.projectImg
+			width: 700px
+			height: 500px	
+	.projectFooter
+	 	position: static 
+	 	display: flex
+	 	align-items: baseline
+	.bottomLine	
+	 	display: none	
+@media screen and (max-width: 1024px)
+	.welcomeWordsHeader
+		max-width: 500px
+		h1
+			@include font(#ffffff, $Merri, 2.438rem, 400)
+	.getInTouch	
+		left: 200px		
+	.servicesContainer
+		width: 95%		
+	.testimonialsClients
+	 	flex-wrap: wrap	
+	 	img
+	 		&:not(:last-child)
+	 			margin: 10px
+	.teamContainer
+		width: 100%	 
+		justify-content: center	
+	footer	
+		&>.wrapper
+			width: 90%			
+@media screen and (max-width: 768px)
+	.servicesContainer
+		flex-direction: column !important
+	.servicesItem
+		&:not(:last-child)
+			margin-bottom: 50px	
+			margin-right: 0px	
+	.Services
+		&>.wrapper
+			&>h1
+				font-size: 1.5em
+				width: 560px
+	.projectItem			
+		.projectImg
+			width: 500px
+			height: 300px						
+	.testimonialsHeader
+		&>h1
+			font-size: 1em		
+	.testimonialsSlider
+		width: 560px
+		&>.owl-dots
+			width: 100%
+			display: flex
+			justify-content: center
+	.testimonialItem
+		margin: 0 auto
+		width: 500px !important
+		img
+			width: 100px !important
+		&>p
+			font-size: 0.8em !important	
+	form
+		max-width: 540px
+		textarea
+			width: 450px	
+@media screen and (max-width: 650px)
+	footer
+		width: 100%
+		&>.wrapper
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			width: 40%			
+	.footerItem
+		&:not(:last-child)
+			margin-bottom: 30px		
+@media screen and (max-width: 560px)
+	.welcomeWordsHeader
+		max-width: 310px
+		h1
+			@include font(#ffffff, $Merri, 1.438rem, 400)
+	.getInTouch	
+		position: static
+		margin-top: 100px
+		@include flex(row, space-between, center)	
+	.Services
+		&>.wrapper
+			&>h1
+				font-size: 1.25em
+				width: 310px		
+
+	.projectItem			
+		.projectImg
+			width: 300px
+			height: 100px
+		&>h1
+			font-size: 2em									
+	.testimonialsSlider
+		width: 320px
+		&>.owl-dots
+			width: 100%
+			display: flex
+			justify-content: center
+			&>.owl-dot
+				&:not(:last-child)
+					margin-right: 25px
+	.testimonialItem
+		padding: 0 20px 20px 20px !important
+		margin: 0 auto
+		width: 300px !important
+		img
+			width: 100px !important
+		&>p
+			font-size: 0.8em !important
+	.contactHeader
+		&>h1
+			font-size: 2em		
+	form
+		padding: 20px
+		max-width: 300px
+		input
+			width: 250px
+		textarea
+			width: 250px			
